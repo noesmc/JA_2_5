@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int number = 0;
+        boolean exit = false;
+        int number;
         do {
             System.out.println("""
                             Menu:
@@ -33,16 +34,16 @@ public class Main {
                             break;
                         case 0:
                             System.out.print("Exit");
+                            exit = true;
                             break;
                         default:
                             System.out.println("Number is unavailable");
                             }
                     }
                     catch (NumberFormatException e) {
-                        System.out.print("Wrong Input!");
-                        number++;
+                        System.out.println("Wrong Input!");
                     }
-        } while (number != 0) ;
+        } while (!exit);
     }
 }
 
