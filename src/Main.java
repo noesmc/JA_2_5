@@ -40,6 +40,7 @@ public class Main {
                     }
                     catch (NumberFormatException e) {
                         System.out.print("Wrong Input!");
+                        number++;
                     }
         } while (number != 0) ;
     }
