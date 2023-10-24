@@ -16,45 +16,43 @@ public class Main {
                     0. Exit
                     """);
 
-                System.out.print("Choose the number: ");
-                try {
-                    number = Integer.parseInt(scanner.next());
-                    scanner.nextLine();
-                    switch (number) {
-                        case 1:
-                            System.out.print("Enter your firstname: ");
-                            firstName = scanner.nextLine();
-                            break;
-                        case 2:
-                            System.out.print("Enter your lastname: ");
-                            lastName = scanner.nextLine();
-                            break;
-                        case 3:
-                            System.out.print("Enter your year of birth: ");
-                            year = scanner.nextLine();
-                            break;
-                        case 4:
-                            if (firstName.isEmpty() || lastName.isEmpty() || year.isEmpty()) {
-                                System.out.println("To display full information enter your firstname, lastname " +
-                                        "and year of birth");
-                            } else {
-                                System.out.printf("FirstName: %s; lastName: %s; year of birth: %s%n",
-                                        firstName, lastName, year);
-                                }
-                            break;
-                        case 0:
-                            System.out.print("Exit");
-                            exit = true;
-                            break;
-                        default:
-                            System.out.println("Number is unavailable");
-                            }
-                    }
-                    catch (NumberFormatException e) {
-                        System.out.println("Wrong Input!");
-                    }
+            System.out.print("Choose the number: ");
+            try {
+                number = Integer.parseInt(scanner.next());
+                scanner.nextLine();
+                switch (number) {
+                    case 1:
+                        System.out.print("Enter your firstname: ");
+                        firstName = scanner.nextLine();
+                        break;
+                    case 2:
+                        System.out.print("Enter your lastname: ");
+                        lastName = scanner.nextLine();
+                        break;
+                    case 3:
+                        System.out.print("Enter your year of birth: ");
+                        year = scanner.nextLine();
+                        break;
+                    case 4:
+                        if (firstName.isEmpty() || lastName.isEmpty() || year.isEmpty()) {
+                            System.out.println("To display full information enter your firstname, lastname " +
+                                    "and year of birth");
+                        } else {
+                            System.out.printf("FirstName: %s; lastName: %s; year of birth: %s%n",
+                                    firstName, lastName, year);
+                        }
+                        break;
+                    case 0:
+                        System.out.print("Exit");
+                        exit = true;
+                        break;
+                    default:
+                        System.out.println("Number is unavailable");
+                }
+            }
+            catch (NumberFormatException e) {
+                System.out.println("Wrong Input!");
+            }
         } while (!exit);
     }
 }
-
-
