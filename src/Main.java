@@ -40,7 +40,7 @@ public class Main {
                             } else {
                                 System.out.printf("FirstName: %s; lastName: %s; year of birth: %s%n",
                                         firstName, lastName, year);
-                            }
+                                }
                             break;
                         case 0:
                             System.out.print("Exit");
